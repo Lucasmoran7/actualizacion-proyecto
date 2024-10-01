@@ -1,0 +1,130 @@
+// estilos de home
+
+//nesting
+
+@import "../utilidades/variables"; 
+@import "../utilidades/mixin";
+body {
+    background-color: $black;
+    color: $white;
+    font-family: $font-family;
+}
+
+header {
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    img {
+        width: 15%;
+        display: flex;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+
+            li a {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+main {
+    background-color: $black;
+    text-align: center;
+    color: $white;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    align-items: center;
+
+    .img-container {
+        width: 95%;
+        max-width: 600px;
+        margin: 0 auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+        border-radius: 0.3em;
+    }
+
+    h1 {
+        align-items: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .div-contenedor {
+        padding: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .img-proyect {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .img-proyect a img {
+        width: 100%;
+        border-radius: 0.3em;
+    }
+}
+
+footer {
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+// Usa el mixin responsive para los breakpoints
+  @include responsive($breakpoint-small) {
+    header img {
+        width: 30%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include responsive($breakpoint-medium) {
+    main {
+        font-size: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@include responsive($breakpoint-large) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+

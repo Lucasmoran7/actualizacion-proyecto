@@ -1,0 +1,22 @@
+// nesting
+
+body{
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+
+  //import
+
+//reset
+
+@import "base/reset";
+@import "base/home";
+@import "../scss/utilidades/variables";
+@import "../scss/utilidades/mixin";
+
+
+
+
+
+

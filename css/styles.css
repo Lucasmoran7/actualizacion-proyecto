@@ -1,3 +1,9 @@
+@charset "UTF-8";
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
 
 * {
   margin: 0;
@@ -40,7 +46,6 @@ header nav ul li a {
 main {
   background-color: black;
   text-align: center;
-  color: white;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 1rem;
@@ -59,9 +64,14 @@ main .img-container {
   border-radius: 0.3em;
 }
 main h1 {
-  align-items: center;
   font-size: 2.5rem;
   margin-bottom: 20px;
+}
+main p {
+  max-width: 600px; /* Limitar ancho del texto */
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 main .div-contenedor {
   padding: 0.5rem;
@@ -73,12 +83,27 @@ main .img-proyect {
   width: 95%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   margin-top: 20px;
 }
 main .img-proyect a img {
   width: 100%;
   border-radius: 0.3em;
+}
+main .equipo {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 0.3em;
+}
+main .contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer {
@@ -101,10 +126,48 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  header img {
+    width: 20%; /* Ajustar tamaño de logo en tablets */
+  }
+  header nav ul {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
   main {
-    font-size: 1.5rem;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; /* Ajustar el espacio entre columnas */
+  }
+  .text-container {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+  .img-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .servicios-conatiner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    max-width: 500px;
+    font-size: 1.2rem;
+  }
+  footer {
+    padding: 15px;
+    text-align: center;
   }
 }
 @media (min-width: 1201px) {
@@ -112,6 +175,10 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
   }
+  .img-container {
+    width: 100%;
+    max-width: 600px;
+  }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

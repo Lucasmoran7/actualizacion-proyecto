@@ -2,9 +2,8 @@ $black: black;
 $white: white;
 $font-family: "Poppins", sans-serif;
 
-//variables de mixin 
 
-// _variables.scss
-$breakpoint-small: 'small';
-$breakpoint-medium: 'medium';
-$breakpoint-large: 'large';
+// Definir breakpoints con valores numéricos
+$breakpoint-small: 600px;   // Cambiado a un valor en píxeles
+$breakpoint-medium: 768px;  // Cambiado a un valor en píxeles
+$breakpoint-large: 1200px;  // Cambiado a un valor en píxeles
